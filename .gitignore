@@ -1,10 +1,16 @@
+#temporary files
+*~
+
 # Object files
-*.o
-*.ko
+src/*.o
+test/*.o
+src/*.ko
+test/*.ko
 
 # Libraries
 *.lib
-*.a
+src/*.a
+test/*.a
 
 # Shared objects (inc. Windows DLLs)
 *.dll
