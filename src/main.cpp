@@ -2,6 +2,7 @@
 #include <sys/time.h>
 #include <fstream>
 #include <string>
+#include <unistd.h>
 #include <native/task.h>
 
 #define TASK_PRIO  99 /* Highest RT priority */
@@ -14,7 +15,7 @@ void thread2 (void *cookie)
 {
   int loop = 0 ;
   while ( loop < 10 ) {
-    ++loop
+    ++loop ;
     cout << "thread2 loop " << loop << endl ;
     sleep ( 1 ) ;
   }
@@ -24,7 +25,7 @@ void thread3 (void *cookie)
 {
   int loop = 0 ;
   while ( loop < 10 ) {
-    ++loop
+    ++loop ;
     cout << "thread3 loop " << loop << endl ;
     sleep ( 1 ) ;
   }
@@ -34,7 +35,7 @@ int main () {
   cout << "hello world" << endl ;
   int err ;
   RT_TASK thread2_desc ;
-  err = rt_task_create(&thread2,
+  err = rt_task_create(&thread2_desc,
                      "thread 2",
                      TASK_STKSZ,
                      TASK_PRIO,
@@ -43,7 +44,7 @@ int main () {
     rt_task_start(&thread2_desc,&thread2,NULL);
 
   RT_TASK thread3_desc ;
-  err = rt_task_create(&thread3,
+  err = rt_task_create(&thread3_desc,
                      "thread 3",
                      TASK_STKSZ,
                      TASK_PRIO,
@@ -53,7 +54,7 @@ int main () {
 
   int loop = 0 ;
   while ( loop < 10 ) {
-    ++loop
+    ++loop ;
     cout << "main thread loop " << loop << endl ;
     sleep ( 1 ) ;
   }
