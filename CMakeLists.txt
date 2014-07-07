@@ -13,7 +13,7 @@ set(GCC_COMPILER_VERSION "4.6" CACHE STRING "GCC Compiler version")
 set(XENOMAI_BASE_DIR "/usr/xenomai" CACHE STRING "Xenomai base dir")
 set(XENOMAI_INC_DIR "${XENOMAI_BASE_DIR}/include")
 set(XENOMAI_LIB_DIR "${XENOMAI_BASE_DIR}/lib")
-
+set(OPENCV_INC_DIR "${BBCD_SOURCE_DIR}/3rdparty/include")
 
 set(FLOAT_ABI_SUFFIX "")
 
