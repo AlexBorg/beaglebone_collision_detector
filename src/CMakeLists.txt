@@ -1,5 +1,5 @@
 # Make sure the compiler can find include files from our 3rd party library. 
-include_directories (${BBCD_SOURCE_DIR}/3rdparty/include/BBBIO ${OPENCV_INC_DIR} ${OPENCV_INC_DIR}/opencv ${XENOMAI_INC_DIR}) 
+include_directories (${BBCD_SOURCE_DIR}/3rdparty/include/BBBIO ${OPENCV_INC_DIR} ${XENOMAI_INC_DIR}) 
 
 # Make sure the linker can find the 3rd party libraries. 
 link_directories (${BBCD_SOURCE_DIR}/3rdparty/lib/ ${XENOMAI_LIB_DIR}) 

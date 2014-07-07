@@ -7,7 +7,7 @@
 #include <native/queue.h>
 
 #include "opencv2/opencv.hpp"
-#include "cv.h"
+#include "opencv/cv.h"
 
 #define TASK_PRIO  99 /* Highest RT priority */
 #define TASK_MODE  0  /* No flags */
